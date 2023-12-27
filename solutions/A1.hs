@@ -13,16 +13,16 @@ _DISPLAY_LOGO_ :: Bool
 _DISPLAY_LOGO_ = True
 
 -- Q#03
-
-convertRowIndex = undefined
+convertRowIndex :: Char -> Int
+convertRowIndex row = (fromEnum (toUpper row)) - 65
 
 -- Q#04
-
-_INVALID_MOVE_ = undefined
+_INVALID_MOVE_ :: (Int, Int)
+_INVALID_MOVE_ = (-1, -1)
 
 -- Q#05
-
-_SEP_ = undefined
+_SEP_ :: [Char]
+_SEP_ = ['_', '|', '_' ]
 
 -- *** Assignment 1-2 *** --
 
