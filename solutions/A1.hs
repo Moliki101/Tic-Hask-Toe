@@ -5,8 +5,8 @@ import Data.Char (toUpper)
 -- *** Assignment 1-1 *** --
 
 -- Q#01
-
-_SIZE_ = undefined
+_SIZE_ :: Int
+_SIZE_ = 3
 
 -- Q#02
 
