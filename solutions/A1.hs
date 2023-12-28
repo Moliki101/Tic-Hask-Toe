@@ -43,12 +43,12 @@ type Board = [Row]
 type Move = (Int, Int)
 
 -- Q#09
-getFirstPlayer :: Bool -> Char
-getFirstPlayer x = if x then 'X' else 'O'
+getFirstPlayer :: Bool -> Player
+getFirstPlayer x = if x then X else O
 
-getFirstPlayer_  :: Bool -> Char
-getFirstPlayer_ y | y = 'X'
-                  | otherwise = 'O'
+getFirstPlayer_  :: Bool -> Player
+getFirstPlayer_ y | y = X
+                  | otherwise = O
 
 -- Q#10
 showGateState :: GameState -> String
