@@ -51,14 +51,22 @@ getFirstPlayer_ y | y = 'X'
                   | otherwise = 'O'
 
 -- Q#10
-
-showGameState gs = undefined
+showGateState :: GameState -> String
+showGateState gs = case gs of
+    XWon -> "X won the game"
+    OWon -> "O won the game"
+    Tie -> "The game is a tie"
+    InProgress -> "The game is in progress"
 
 -- Q#11
-
-switchPlayer = undefined
+switchPlayer :: Player -> Player
+switchPlayer X = O
+switchPlayer O = X
+switchPlayer Empty = Empty
 
 
 -- Q#12
-
-showSquare = undefined
+showSquare :: Square -> String
+showSquare X = "X"
+showSquare O = "O"
+showSquare Empty = "_"
