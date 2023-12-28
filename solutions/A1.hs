@@ -27,26 +27,28 @@ _SEP_ = ['_', '|', '_' ]
 -- *** Assignment 1-2 *** --
 
 -- Q#06
-data Square
+data Square = X | O | Empty deriving (Show, Eq)
 
 
 -- Q#07
-data GameState
+data GameState = XWon | OWon | Tie | InProgress deriving (Show, Eq)
 
 
 -- Q#08
-
-
-
-
-
+type BoardSquare = Int
+type Player = Square
+type Row = [Square]
+type Line = [Square]
+type Board = [Row]
+type Move = (Int, Int)
 
 -- Q#09
+getFirstPlayer :: Bool -> Char
+getFirstPlayer x = if x then 'X' else 'O'
 
-getFirstPlayer = undefined
-
-
-getFirstPlayer_ = undefined
+getFirstPlayer_  :: Bool -> Char
+getFirstPlayer_ y | y = 'X'
+                  | otherwise = 'O'
 
 -- Q#10
 
