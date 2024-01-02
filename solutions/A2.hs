@@ -9,29 +9,30 @@ import Data.List (intercalate)
 
 -- Q#01
 
-promptPlayer = undefined
+promptPlayer :: Player -> String
+promptPlayer p = "Player " ++ show p ++ "'s turn: enter a row and column position"
 
 -- Q#02
-
-_RANGE_ = undefined
+_RANGE_ :: [Int]
+_RANGE_ = init [0 .. _SIZE_]
 
 -- Q#03
+isDigit :: Char -> Bool
+isDigit c = c `elem` ['0' .. '9']
 
-isDigit = undefined
-
-
-readDigit = undefined
+readDigit :: Char -> Int
+readDigit c | isDigit c = read [c]
+            | otherwise = -1
 
 -- Q#04
 
-_EMPTY_ROW_ = undefined
+_EMPTY_ROW_ = replicate _SIZE_ Empty
 
-
-_EMPTY_BOARD_ = undefined
+_EMPTY_BOARD_ = replicate _SIZE_ _EMPTY_ROW_
 
 -- Q#05
 
-isTied = undefined
+isTied board= concat (null [[Square]])
 
 
 _TIED_BOARD_ = undefined
