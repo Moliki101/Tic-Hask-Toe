@@ -42,12 +42,12 @@ _TIED_BOARD_ = [
     ]
 
 -- Q#06
-
-indexRowStrings = undefined
+indexRowStrings :: [String] -> [(Char, String)]
+indexRowStrings _INDEX_ROW_ = zip ['A', 'B' .. 'Z'] _INDEX_ROW_
 
 -- Q#07
-
-formatLine = undefined
+formatLine :: [String] -> String
+formatLine xs = concat [intercalate _SEP_ xs]
 
 -- *** Assignment 2-2 *** --
 
