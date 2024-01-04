@@ -47,7 +47,7 @@ indexRowStrings _INDEX_ROW_ = zip ['A', 'B' .. 'Z'] _INDEX_ROW_
 
 -- Q#07
 formatLine :: [String] -> String
-formatLine xs = concat [intercalate _SEP_ xs]
+formatLine _LINE_ = _SEP_ ++ intercalate _SEP_ _LINE_ ++ _SEP_
 
 -- *** Assignment 2-2 *** --
 
