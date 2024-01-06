@@ -52,8 +52,8 @@ formatLine _LINE_ = _SEP_ ++ intercalate _SEP_ _LINE_ ++ _SEP_
 -- *** Assignment 2-2 *** --
 
 -- Q#08
-
-isMoveInBounds = undefined
+isMoveInBounds :: Move -> Bool
+isMoveInBounds (x, y) =  and [x >= 0, x < _SIZE_, y >= 0, y < _SIZE_]
 
 -- Q#09
 
