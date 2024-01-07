@@ -53,7 +53,7 @@ formatLine _LINE_ = _SEP_ ++ intercalate _SEP_ _LINE_ ++ _SEP_
 
 -- Q#08
 isMoveInBounds :: Move -> Bool
-isMoveInBounds (x, y) =  and [x >= 0, x < _SIZE_, y >= 0, y < _SIZE_]
+isMoveInBounds (x, y) = and [x >= 0, x < _SIZE_, y >= 0, y < _SIZE_]
 
 -- Q#09
 
