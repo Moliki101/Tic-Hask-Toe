@@ -63,5 +63,15 @@ stringToMove "B11" = _INVALID_MOVE_
 stringToMove _ = _INVALID_MOVE_
 
 -- Q#10
+replaceSquareInRow :: Player -> Int -> Row -> Row
+replaceSquareInRow p i row =
+  let (left, right) = splitAt i row
+  in if i < 1 || col > length row || null right
+      then row
+      else left ++ [player] ++ tail right
+      
+ rsX :: Int -> Row -> Row
+ rsX = replaceSquareInRow X
 
-replaceSquareInRow = undefined
+ rsO :: Int -> Row -> Row
+ rsO = replaceSquareInRow O 
