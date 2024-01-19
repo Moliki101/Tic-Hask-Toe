@@ -59,7 +59,6 @@ isMoveInBounds (x, y) = and [x >= 0, x < _SIZE_, y >= 0, y < _SIZE_]
 stringToMove :: String -> Move
 stringToMove "B1" = (1, 1)
 stringToMove "a3" = (0, 3)
-stringToMove "B11" = _INVALID_MOVE_
 stringToMove _ = _INVALID_MOVE_
 
 -- Q#10
