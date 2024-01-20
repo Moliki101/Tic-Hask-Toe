@@ -63,14 +63,14 @@ stringToMove _ = _INVALID_MOVE_
 
 -- Q#10
 replaceSquareInRow :: Player -> Int -> Row -> Row
-replaceSquareInRow p i row =
-  let (left, right) = splitAt i row
-  in if i < 1 || i > length row || null right
-      then row
-      else left ++ row ++ tail right
-      
+replaceSquareInRow player index row
+  | index < 0 || index >= length row = row
+  | otherwise = left ++ [player] ++ tail right
+  where
+    (left, right) = splitAt index row
+
 rsX :: Int -> Row -> Row
 rsX = replaceSquareInRow X
 
 rsO :: Int -> Row -> Row
-rsO = replaceSquareInRow O 
+rsO = replaceSquareInRow O
