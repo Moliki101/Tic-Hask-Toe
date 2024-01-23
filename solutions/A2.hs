@@ -69,8 +69,6 @@ replaceSquareInRow player index row
   where
     (left, right) = splitAt index row
 
-rsX :: Int -> Row -> Row
 rsX = replaceSquareInRow X
 
-rsO :: Int -> Row -> Row
 rsO = replaceSquareInRow O
