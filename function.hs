@@ -28,3 +28,20 @@ length' (_:xs) = 1 + length' xs
 sum' :: Num p => [p] -> p
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
+
+bmiTell :: (Ord a, Fractional a) => a -> a -> [Char]
+bmiTell weight height
+ | bmi <= skinny = "You are underweight"
+ | bmi <= normal = "You have normal weight"
+ | bmi <= fat = "You are overweight"
+ | otherwise = "You are obese!"
+ where bmi = weight / height ^ 2
+       skinny = 18.5
+       normal = 25
+       fat = 30
+
+totalSurface :: Floating a => a -> a -> a
+totalSurface r h = sideArea + 2 * topArea
+      where
+            sideArea = 2 * pi * r * h
+            topArea = pi * r ^2
